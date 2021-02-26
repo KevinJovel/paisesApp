@@ -1,16 +1,18 @@
-<h2>Por capital</h2>
-<hr>
-<div class="row">
-    <div class="col">
-       <app-input-buscar
-         (onEnter)="buscar($event)"
-         (onDebounce)="sugerencias($event)"
-         placeholder="Buscar capital..."
-         >
-       </app-input-buscar>
+<div class="animate__animated animate__fadeIn animate_faster">
+    <h2>Por capital</h2>
+    <hr>
+    <div class="row">
+        <div class="col">
+           <app-input-buscar
+             (onEnter)="buscar($event)"
+             (onDebounce)="sugerencias($event)"
+             placeholder="Buscar capital..."
+             >
+           </app-input-buscar>
+        </div>
     </div>
+    <hr>
 </div>
-<hr>
 <div *ngIf="hayError" class="alert alert-danger">
     No se encontró nada con el termino {{termino}}
 </div>
